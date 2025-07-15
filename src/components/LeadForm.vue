@@ -54,7 +54,7 @@ onMounted(() => {
   form.value = {
     name: '',
     phone: '',
-    message: 'Доброго дня! Я хочу залишити заявку.' as string,
+    message: 'Доброго дня! Я хочу отримати консультацію.' as string,
   };
 });
 
