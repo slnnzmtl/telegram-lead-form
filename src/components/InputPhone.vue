@@ -148,7 +148,7 @@ export default defineComponent({
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transition: 0.2s ease all;
-
+  color: #e6f0fa !important;
   
 
   &:focus {
@@ -169,7 +169,6 @@ export default defineComponent({
     -webkit-box-shadow: 0 0 0px 1000px #1B1B1C inset !important;
     transition: background-color 5000s ease-in-out 0s;
     background-color: rgba(255, 255, 255, 0.1) !important;
-
   };
 
 

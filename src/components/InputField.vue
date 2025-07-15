@@ -114,6 +114,7 @@ export default defineComponent({
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   transition: 0.2s ease all;
+  color: #e6f0fa;
 
   &:focus {
     outline: none;
