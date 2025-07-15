@@ -11,11 +11,12 @@
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
+import type { PropType } from 'vue';
 export default defineComponent({
   name: 'Button',
   props: {
     type: {
-      type: String,
+      type: String as PropType<'button' | 'submit' | 'reset'>,
       default: 'button',
     },
     disabled: {

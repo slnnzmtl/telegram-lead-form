@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, ref, computed, watch } from "vue";
-import { parsePhoneNumberFromString, AsYouType } from "libphonenumber-js";
+import { parsePhoneNumberFromString, AsYouType, CountryCode } from "libphonenumber-js";
 
 export default defineComponent({
   name: "InputPhone",
@@ -26,8 +26,8 @@ export default defineComponent({
       default: "phone",
     },
     defaultCountry: {
-      type: String,
-      default: "RU",
+      type: String as () => CountryCode,
+      default: "UA" as CountryCode,
     },
   },
   emits: ["update:modelValue"],

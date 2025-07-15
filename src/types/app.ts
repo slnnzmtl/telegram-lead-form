@@ -11,6 +11,6 @@ export interface ApiResponse {
 export interface FormData {
   name: string;
   phone: string;
-  message?: string;
+  message: string;
   buttons?: Button[];
 }
