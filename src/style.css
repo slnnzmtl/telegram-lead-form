@@ -9,6 +9,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #000000 5%, #0b75bc 70%, #fa6dde 100%);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease-in-out infinite;
+  min-height: 100vh;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #app {
