@@ -52,5 +52,6 @@ export const useTelegram = () => {
     expand,
     showAlert,
     showConfirm,
+    startAppParam: tg.value?.initDataUnsafe?.start_param || '',
   };
 };

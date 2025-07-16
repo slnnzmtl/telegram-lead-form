@@ -41,7 +41,7 @@ import InputPhone from '@/components/InputPhone.vue';
 import TextArea from './TextArea.vue';
 
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || 'YOUR_WEBHOOK_URL_HERE';
-const { close } = useTelegram();
+const { close, startAppParam } = useTelegram();
 const { form, sendForm } = useForm(WEBHOOK_URL);
 
 const submitted = ref(false);
@@ -50,17 +50,12 @@ const formValid = computed(() => {
          form.value.phone.trim() !== ''
 });
 
-function getServiceIdFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get('serviceId') || '';
-}
-
 onMounted(() => {
   form.value = {
     name: '',
     phone: '',
     message: 'Доброго дня! Я хочу отримати консультацію.' as string,
-    serviceId: getServiceIdFromUrl(),
+    serviceId: startAppParam,
   };
 });
 
