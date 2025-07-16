@@ -10,6 +10,7 @@ export const useForm = (webhookUrl: string) => {
     name: '',
     phone: '',
     message: '',
+    serviceId: '',
     buttons: [],
   });
 

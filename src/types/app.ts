@@ -12,5 +12,6 @@ export interface FormData {
   name: string;
   phone: string;
   message: string;
+  serviceId: string;
   buttons?: Button[];
 }

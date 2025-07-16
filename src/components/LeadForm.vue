@@ -50,11 +50,17 @@ const formValid = computed(() => {
          form.value.phone.trim() !== ''
 });
 
+function getServiceIdFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('serviceId') || '';
+}
+
 onMounted(() => {
   form.value = {
     name: '',
     phone: '',
     message: 'Доброго дня! Я хочу отримати консультацію.' as string,
+    serviceId: getServiceIdFromUrl(),
   };
 });
 
