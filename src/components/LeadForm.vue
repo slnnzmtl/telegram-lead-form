@@ -41,7 +41,7 @@ import InputPhone from '@/components/InputPhone.vue';
 import TextArea from './TextArea.vue';
 
 const WEBHOOK_URL = import.meta.env.VITE_WEBHOOK_URL || 'YOUR_WEBHOOK_URL_HERE';
-const { close, startAppParam } = useTelegram();
+const { close, tg } = useTelegram();
 const { form, sendForm } = useForm(WEBHOOK_URL);
 
 const submitted = ref(false);
@@ -55,7 +55,7 @@ onMounted(() => {
     name: '',
     phone: '',
     message: 'Доброго дня! Я хочу отримати консультацію.' as string,
-    serviceId: startAppParam,
+    serviceId: tg.value?.initDataUnsafe.start_param || '',
   };
 });
 
